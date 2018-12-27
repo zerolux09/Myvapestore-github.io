@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<title>My Vapestore</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/jquery-ui-1.10.1.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/jquery-ui-1.10.1.custom.min.js"></script>
+	<script src="js/select.js"></script> 
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.src.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$("#ajax-contact-form").submit(function() {
+				var str = $(this).serialize();		
+				$.ajax({
+					type: "POST",
+					url: "contact_form/contact_process.php",
+					data: str,
+					success: function(msg) {
+						// Message Sent - Show the 'Thank You' message and hide the form
+						if(msg == 'OK') {
+							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+							$("#fields").hide();
+						} else {
+							result = msg;
+						}
+						$('#note').html(result);
+					}
+				});
+				return false;
+			});
+
+		});		
+	</script>
+	
+	<script type="text/javascript">//$($.date_input.initialize);</script>
+	
+</head>
+
+<body>
+
+<div class="menu">	
+	<div class="container clearfix">
+
+		<div id="logo" class="fleft">
+			<a href="javascript:void(0);"><img src="images/logo.png" /></a>
+		</div>
+		
+		<div id="nav" class="fright">
+			<ul class="navigation">
+				<li data-slide="1">Домой</li>
+				<li data-slide="2">Преймущества</li>
+				<li data-slide="4">Жидкости</li>
+				<li data-slide="6">Товари</li>
+				<li data-slide="10">Купить</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+	<div class="padding_slide1">
+		<div class="container clearfix">
+			<div id="content" class="grid_12">
+				<div class="filtr_bg">
+					 <img src="1q.jpg">
+				</div>
+				<a class="button" title="" data-slide="7">Заказать </a>
+				<!--<h3>Преймущества мех-мода</h3>-->
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<div class="vape">
+</div>
+	
+</div>
+<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide8 ">
+		<div class="container clearfix">
+
+			
+			
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+	
+		<div id="content" class="grid_12">
+			
+		</div>
+	
+	</div>
+</div>-->
+
+
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide2">
+		<div class="container clearfix">
+			<div><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br
+			</div>
+			<div id="content" class="grid_12">
+			
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide6">
+		<div class="container clearfix">
+			
+			<div id="content" class="grid_12">
+				<h1><span>Товари</span></h1>
+				<h2>Товари продаються в полной сборке от дивайся к зарядке и жидкости для возможности пользоваться с 1 минуты</h2>
+			</div>
+			<div class="clear"></div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+	
+		<div class="overflow_hidden">
+			<!-- gallery_block -->
+			<ul class="gallery-list">                                  
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/1.jpg" alt="" />
+						<div class="item_description">
+							<p>Kennedy 24 Trickster RDA</p>
+							Комплектация:<br>
+
+<font size="1">Дрипка Kennedy Trickster 24 RDA 1 шт.;<br>
+Мех-мод Kennedy Hybrid 24 1 шт.;<br>
+Запасной комплект О-рингов 1 шт.;<br>
+Ключ-шестигранник – 2 шт.;<br>
+Запасные винты для стоек 2 шт.<br>
+Акумулятор:18650 Sony VTC4 30A 1 шт.<br>
+Зарядка 1 шт.</font>							<span class="portfolio_zoom"><a href="images/gallery/full/1.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор:Kennedy 24 Trickster RDA<br>999грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/2.jpg" alt="" />
+						<div class="item_description">
+							<p>VGOD Pro Mech MOD Pro Drip RDA Combo Kit</p>
+						<font size="1">	Дрипка Pro Drip RDA Combo 1 шт.;<br>
+Мех-мод VGOD Pro Mech MOD 1 шт.;<br>
+Запасной комплект О-рингов 1 шт.;<br>
+Ключ-шестигранник – 2 шт.;<br>
+Запасные винты для стоек 2 шт.<br>
+Акумулятор:18650 Sony VTC4 30A 1 шт.<br>
+Зарядка 1 шт.</font>	
+							<span class="portfolio_zoom"><a href="images/gallery/full/2.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор:VGOD Pro Mech MOD Pro Drip RDA Combo Kit<br>899грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/3.jpg" alt="" />
+						<div class="item_description">
+							<p>ijust S</p>
+							Cras quis arcu lorem. Aenean feugiat auctor risus, eget sodales turpis fringilla id.
+							<span class="portfolio_zoom"><a href="images/gallery/full/3.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Ijust S<br>700грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/4.jpg" alt="" />
+						<div class="item_description">
+							<p>CuBox with Cubis 2</p>
+							Cras quis arcu lorem. Aenean feugiat auctor risus, eget sodales turpis fringilla id.
+							<span class="portfolio_zoom"><a href="images/gallery/full/4.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>CuBox with Cubis 2<br>1300грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/5.jpg" alt="" />
+						<div class="item_description">
+							<p>Набор:Joyetech eGo AIO Box</p>
+							Cras quis arcu lorem. Aenean feugiat auctor risus, eget sodales turpis fringilla id.
+							<span class="portfolio_zoom"><a href="images/gallery/full/5.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор:Joyetech eGo AIO Box<br>800грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/6.jpg" alt="" />
+						<div class="item_description">
+							<p>Набор:Rogue USA Kit Black</p>
+							<font size="1">	Дрипка  1 шт.;<br>
+Мех-мод Rogue USA Kit Black 1 шт.;<br>
+Запасной комплект О-рингов 1 шт.;<br>
+Ключ-шестигранник – 2 шт.;<br>
+Запасные винты для стоек 2 шт.<br>
+Акумулятор:18650 Sony VTC4 30A 1 шт.<br>
+Зарядка 1 шт.</font>	
+							<span class="portfolio_zoom"><a href="images/gallery/full/6.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор:Rogue USA Kit Black<br>999грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/7.jpg" alt="" />
+						<div class="item_description">
+							<p> Набор:Wismec Reuleaux RX GEN3 300W </p>
+							<font size="1">	Дрипка  1 шт.;<br>
+Wismec Reuleaux RX GEN3 300W 1 шт.;<br>
+Запасной комплект О-рингов 1 шт.;<br>
+Ключ-шестигранник – 2 шт.;<br>
+Запасные винты для стоек 2 шт.<br>
+Акумулятор:18650 Sony VTC4 30A 3 шт.<br>
+Зарядка 1 шт.</font>	
+							<span class="portfolio_zoom"><a href="images/gallery/full/7.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор: Wismec Reuleaux RX GEN3 300W Original<br>1999грн.</p>
+					</div>
+				</li>
+				<li class="grid_3">
+					<div class="hover_img">
+						<img src="images/gallery/8.jpg" alt="" />
+						<div class="item_description">
+							<p>Eleaf Pico Dual 200w </p>
+						<font size="1">	Дрипка  1 шт.;<br>
+Eleaf Pico Dual 200wW 1 шт.;<br>
+Запасной комплект О-рингов 1 шт.;<br>
+Ключ-шестигранник – 2 шт.;<br>
+Запасные винты для стоек 2 шт.<br>
+Акумулятор:18650 Sony VTC4 30A 3 шт.<br>
+Зарядка 1 шт.</font>	
+							<span class="portfolio_zoom"><a href="images/gallery/full/1.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="javascript:void(0);"></a></span>
+						</div>
+						<p>Набор:Eleaf Pico Dual 200w<br>1499грн.</p>
+					</div>
+				</li>
+				<div class="clear"></div>
+			</ul>   
+			<!-- //gallery_block -->   
+		</div>
+	
+	</div>
+</div>
+
+
+
+<!--<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+
+		<div id="content" class="grid_12">
+			<img class="about_img" src="images/about_img1.jpg" alt="" />
+			<h4>Статя про вигоди переду на вейп</h4>
+			<p>Ut pretium condimentum diam quis gravida. Donec odio justo, mollis eget tristique vel, feugiat ut lectus. Donec consectetur leo sed nibh tempus eget consequat quam interdum. Morbi egestas volutpat metus, nec ullamcorper eros pharetra quis. Praesent ante nisi, pellentesque ac scelerisque id, sodales ac erat. In pretium, magna consectetur malesuada bibendum, neque elit facilisis metus, sit amet convallis est tortor vel urna. Sed consequat nisl quis lorem varius feugiat porta lorem imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sollicitudin risus. Quisque at quam magna. Ut facilisis sodales pellentesque. Nullam ultrices ullamcorper suscipit.</p>
+			<p>Praesent leo est, pharetra sed varius ut, pulvinar ac arcu. Maecenas et purus ut dolor mattis suscipit. Pellentesque accumsan risus a magna iaculis vel imperdiet massa luctus. Phasellus mattis neque nec mi pulvinar eget molestie nibh lacinia. Pellentesque orci enim, molestie quis gravida id, feugiat vitae dui. Praesent eu tincidunt sem. Etiam nunc nisi, convallis sed imperdiet sit amet, ultricies eget est. Vivamus feugiat tellus in diam laoreet blandit. Nullam at dui sit amet nibh iaculis consectetur. Proin erat, sit amet euismod nibh. Morbi enim turpis, porttitor eget lacinia in, facilisis id ligula. Praesent id tellus metus, vitae iaculis quam. Class aptent taciti litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis risus adipiscing purus dictum elementum.</p>
+		</div>-->
+
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide4">
+		<div class="container clearfix">
+			
+			<div id="content" class="grid_12">
+				<h1><span>Жидкости</span></h1>
+				<!--<h2>Cras urna leo, fringilla nec aliquam ac, varius in enim. Maecenas non felis</h2>-->			
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+
+		<div class="grid_4">
+			<a class="serv_block" href="javascript:void(0);" alt="">
+				<div class="icon_block1"></div>
+				<p>Fruit sponge cake</p>
+				Mauris sit amet massa enim. Vivamus scelerisque feugiat ornare. Nulla quis nulla lectus. Curabitur
+			</a>
+		</div>
+		<div class="grid_4">
+			<a class="serv_block" href="javascript:void(0);" alt="">
+				<div class="icon_block2"></div>
+				<p>Fruit pleasure</p>
+				Vivamus rhoncus facilisis orci et sagittis. Aliquam mollis commodo auctor. Aenean id neque libero
+			</a>
+		</div>
+		<div class="grid_4 omega">
+			<a class="serv_block" href="javascript:void(0);" alt="">
+				<div class="icon_block3"></div>
+				<p>BananasBOOM</p>
+				Donec in ligula eget quam elementum consectetur id vel ante. Donec tristique, mi ac faucibus
+			</a>
+		</div>
+	</div>
+		<div class="grid_4 omega">
+			<a class="serv_block" href="javascript:void(0);" alt="">
+				<div class="icon_block4"></div>
+				<div class="p1">
+				<p>Creamy caramel paradise</p>
+				очаровательний вкух
+			</a></div>
+		</div>
+			<div class="grid_4 omega">
+			<a class="serv_block" href="javascript:void(0);" alt="">
+				<div class="icon_block5"></div>
+				<div class="p2">
+				<p>Cherry apple juiceа</p>
+				Изумительний запах
+			</a></div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide10">
+		<div class="container clearfix">
+			
+			<div id="content" class="grid_12">
+				<h1><span>Заказ</span></h1>
+			<!--<h2>Cras urna leo, fringilla nec aliquam ac, varius in enim. Maecenas non felis</h2>-->
+			</div>
+			<div class="clear"></div>
+
+		</div>
+	</div>
+	
+</div>
+
+
+
+<div class="slide" id="slide11" data-slide="11" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div class="grid_3 contact_det_block">
+			<p>Додатковий текст</p>
+			<ul class="foot_block_intouch">
+				<li class="touch_phone"><p>+380631385340</p></li>
+				<li class="touch_clock"><p>Пн - Сб З 9:00 - 19:00 гд</p></li>
+				<li class="touch_mail"><a href="mailto:support@lorem.com">Zerolux09@gmail.com</a></li>
+				<li class="touch_site"><a href="javascript:void(0);">www.myvape-store.com.ua</a></li>
+				<!--<li class="touch_adress"><p>Адреса</p></li>-->
+			</ul>
+		</div>
+		<div class="grid_9 omega">
+			<div class="contact_form">  
+				<div id="note"></div>
+				<div id="fields">
+					<form id="ajax-contact-form" action="">
+						<input type="text" name="name" value="" placeholder="ФИО" />
+						<input type="text" name="subject" value="" placeholder="Номер" />
+						<input type="text" name="email" value="" placeholder="Email" />
+						<textarea name="message" id="message" placeholder="Ваш заказ"></textarea>
+						<div class="clear"></div>
+					
+						<input type="submit" class="contact_btn send_btn" value="Заказать" />
+						<div class="clear"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	
+	</div>
+	
+	
+
+
+
+<div id="footer">
+	<div class="container clearfix">
+		<div class="copyright">My Vape &copy; 2018 | <a href="javascript:void(0);">Privacy Policy</a></div>
+		<div id="back_top"><a class="button" title="" data-slide="1"></a></div><br>
+		<a style="color:#343434;" href="https://web-exito.ru/shablony-landing-page/" target="_blank">Landing page</a>
+	</div>
+</div>
+
+
+</body>
+</html>
